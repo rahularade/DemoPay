@@ -8,7 +8,6 @@ import auth from "../middleware";
 
 const userRouter = express.Router();
 const signupBody = z.object({
-    username: z.email("Invalid email address").trim().toLowerCase(),
     firstName: z
     .string()
     .trim()
@@ -19,6 +18,7 @@ const signupBody = z.object({
     .trim()
     .min(3, "Lastname must be at least 3 characters")
     .max(30, "Lastname must be less than 30 characters"),
+    username: z.email("Invalid email address").trim().toLowerCase(),
     password: z
         .string()
         .min(8, "Password must be at least 8 characters")
@@ -34,9 +34,9 @@ const signinBody = signupBody.pick({
 });
 
 const updateBody = signupBody.pick({
-    password: true,
     firstName: true,
     lastName: true,
+    password: true,
 });
 
 userRouter.post("/signup", async (req, res) => {
@@ -182,11 +182,13 @@ userRouter.get("/bulk", auth, async (req, res) => {
                 {
                     firstName: {
                         $regex: filter,
+                        $options: "i"
                     },
                 },
                 {
                     lastName: {
                         $regex: filter,
+                        $options: "i"
                     },
                 },
             ])
