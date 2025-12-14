@@ -3,6 +3,7 @@ import { Avatar } from "../components/Avatar";
 import { useState, type ChangeEvent } from "react";
 import axios, { AxiosError } from "axios";
 import { BACKEND_URL } from "../config";
+import { Appbar } from "../components/Appbar";
 
 export function SendMoney() {
     const [searchParams] = useSearchParams();
@@ -62,7 +63,9 @@ export function SendMoney() {
     }
 
     return (
-        <div className="h-dvh w-dvw flex justify-center items-center bg-gray-100">
+        <div className="min-h-dvh grid grid-rows-[auto_1fr]">
+        <Appbar />
+        <div className="w-dvw flex justify-center pb-20 items-center bg-gray-50">
             <div className="h-min w-96 p-8 rounded-lg shadow-lg bg-white text-center">
                 <h2 className="text-3xl font-bold pb-4">Send Money</h2>
                 <div className="flex items-center space-x-2">
@@ -86,6 +89,7 @@ export function SendMoney() {
                 <button className="justify-center mt-4 rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-green-500 text-white" onClick={handleTransfer}>
                     Initiate Transfer
                 </button>
+            </div>
             </div>
         </div>
     );

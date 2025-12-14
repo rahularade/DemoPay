@@ -8,7 +8,7 @@ export const Navbar = ({
     const navigate = useNavigate();
 
     return (
-        <nav className="flex items-center text-gray-900 justify-between px-6 py-3 border-b-2 border-black bg-white sticky top-0 z-50">
+        <nav className="flex items-center text-gray-900 justify-between px-20 py-3 border-b-2 border-black bg-white sticky top-0 z-50">
             <div
                 className="text-2xl font-black cursor-pointer"
                 onClick={() => navigate("/")}

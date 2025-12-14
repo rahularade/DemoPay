@@ -38,11 +38,11 @@ export function Users() {
 
     return (
         <div className="px-20">
-            <div className="font-bold mt-6 text-lg py-1">Users</div>
+            <div className="font-bold mt-6 text-xl py-1">Users</div>
             <input
                 type="text"
                 placeholder="Search users..."
-                className="w-full px-2 py-1 border border-slate-200 rounded outline-0"
+                className="w-full px-2 py-1 text-lg border border-slate-200 rounded outline-0"
                 onChange={(e) => setFilter(e.target.value)}
             />
             <div className="my-2">
