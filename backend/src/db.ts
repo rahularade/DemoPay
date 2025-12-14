@@ -1,6 +1,4 @@
 import mongoose, { SchemaTypes } from "mongoose";
-import { lowercase, maxLength, minLength, trim } from "zod";
-import { required } from "zod/v4/core/util.cjs";
 
 const userSchema = new mongoose.Schema({
     username: {

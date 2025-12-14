@@ -1,7 +1,7 @@
 import express from "express";
 import { Account } from "../db";
 import auth from "../middleware";
-import mongoose, { SchemaType, startSession } from "mongoose";
+import { startSession } from "mongoose";
 
 const accountRouter = express.Router();
 
