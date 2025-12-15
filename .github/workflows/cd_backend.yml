@@ -38,5 +38,6 @@ jobs:
                 script: |
                     docker stop paytm-backend || true
                     docker rm paytm-backend || true
+                    docker rmi ${{ secrets.DOCKERHUB_USERNAME }}/paytm-backend:latest || true
                     docker run -d -p 3000:3000 --name paytm-backend -e MONGODB_URL=${{ secrets.MONGODB_URL }} -e JWT_SECRET=${{ secrets.JWT_SECRET }} ${{ secrets.DOCKERHUB_USERNAME }}/paytm-backend:latest
             

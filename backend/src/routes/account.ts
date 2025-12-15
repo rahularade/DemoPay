@@ -29,7 +29,7 @@ accountRouter.get("/balance", auth, async (req, res) => {
         });
     } catch (error) {
         res.status(500).json({
-            messsage: "Failed to fetch balance. Try again later.",
+            message: "Failed to fetch balance. Try again later.",
         });
     }
 });
@@ -63,7 +63,7 @@ accountRouter.post("/transfer", auth, async (req, res) => {
         const account = await Account.findOne({ userId: req.userId }).session(
             session
         );
-        if (!account || account.balance < amount) {
+        if (!account || account.balance < parsedAmount) {
             await session.abortTransaction();
             return res.status(400).json({
                 message: "Insufficient balance",
