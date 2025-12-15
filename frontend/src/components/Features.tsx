@@ -20,7 +20,7 @@ export function Features(){
 }
 
 function FeatureCard({title, description} : {title: string, description: string}){
-    return <div className="p-8 border-2 border-black hover:bg-black hover:text-white transition-colors group">
+    return <div className="p-8 border-2 border-black hover:bg-black hover:text-white transition-colors group rounded-lg">
     <h3 className="text-2xl font-bold mb-2">{title}</h3>
     <p className="font-medium opacity-80">{description}</p>
   </div>

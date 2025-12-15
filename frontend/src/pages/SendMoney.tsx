@@ -64,7 +64,7 @@ export function SendMoney() {
     }
 
     return (
-        <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
+        <div className="min-h-dvh grid grid-rows-[auto_1fr_auto] bg-gray-50">
         <Appbar />
         <div className="w-dvw flex justify-center pb-20 items-center bg-gray-50">
             <div className="h-min w-96 p-8 rounded-lg shadow-lg bg-white text-center">
@@ -74,7 +74,7 @@ export function SendMoney() {
                     <h3 className="text-2xl font-semibold">{name}</h3>
                 </div>
                 <div>
-                    <div className="text-sm font-medium text-left py-2">
+                    <div className="font-medium text-left py-2">
                         Amount (in Rs)
                     </div>
                     <input
@@ -84,10 +84,10 @@ export function SendMoney() {
                         min={0}
                         placeholder="Enter amount"
                         onChange={handleChange}
-                        className="w-full px-2 py-1 border border-slate-200 rounded outline-0"
+                        className="w-full px-2 py-1.5 border border-slate-200 rounded outline-0"
                     />
                 </div>
-                <button className="justify-center mt-4 rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-green-500 text-white" onClick={handleTransfer}>
+                <button className="justify-center mt-4 rounded-md font-bold ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-green-500 text-white" onClick={handleTransfer}>
                     Initiate Transfer
                 </button>
             </div>
