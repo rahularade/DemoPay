@@ -8,6 +8,7 @@ import axios, { AxiosError } from "axios";
 import { BACKEND_URL } from "../config";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 export function Signup() {
     const [firstName, setFirstName] = useState("");
@@ -38,10 +39,10 @@ export function Signup() {
     };
 
     return (
-        <div className="min-h-dvh grid grid-rows-[auto_1fr]">
+        <div className="min-h-dvh grid grid-rows-[auto_1fr_auto] bg-stone-200">
             <Navbar type={"signup"}/>
             <div className="bg-stone-200 w-dvw flex justify-center items-center pb-10">
-                <div className="bg-white w-96 text-center h-max py-5 px-8 rounded-lg">
+                <div className="bg-white w-md text-center h-max py-8 px-10 rounded-lg">
                     <Heading label="Sign Up" />
                     <SubHeading label="Enter your infromation to create an account" />
                     <InputBox
@@ -81,6 +82,7 @@ export function Signup() {
                     />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

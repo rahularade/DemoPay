@@ -8,6 +8,7 @@ import { BACKEND_URL } from "../config";
 import axios, { AxiosError } from "axios";
 import { Navbar } from "../components/Navbar";
 import { useAuth } from "../contexts/AuthContext";
+import { Footer } from "../components/Footer";
 
 export function Signin() {
     const [username, setUsername] = useState("");
@@ -35,10 +36,10 @@ export function Signin() {
     };
 
     return (
-        <div className="min-h-dvh grid grid-rows-[auto_1fr]">
+        <div className="min-h-dvh grid grid-rows-[auto_1fr_auto] bg-stone-200">
             <Navbar type={"signin"} />
             <div className="bg-stone-200 w-dvw flex justify-center items-center pb-10">
-                <div className="bg-white w-96 text-center h-max py-5 px-8 rounded-lg">
+                <div className="bg-white w-md text-center h-max py-8 px-10 rounded-lg">
                     <Heading label="Sign In" />
                     <SubHeading label="Enter your credentials to access your account" />
                     <InputBox
@@ -64,6 +65,7 @@ export function Signin() {
                     />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

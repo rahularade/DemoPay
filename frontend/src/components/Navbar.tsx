@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Github } from "./Github";
 
 export const Navbar = ({
     type = null,
@@ -16,6 +17,7 @@ export const Navbar = ({
                 PAYTM.
             </div>
             <div className="flex gap-4 items-">
+                <Github />
                 <button
                     onClick={() => navigate("/signin")}
                     className={`px-4 py-2 font-bold text-gray-900 bg-white border-2 border-gray-900 hover:bg-gray-100 transition-colors rounded ${

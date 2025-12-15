@@ -8,7 +8,7 @@ interface BottomWarningProps{
 
 
 export function BottomWarning({label, buttonText, to}: BottomWarningProps){
-    return <div className="flex justify-center py-2 text-sm">
+    return <div className="flex justify-center pt-1">
         <div>{label}</div>
         <Link className="cursor-pointer underline pl-1" to={to}>{buttonText}</Link>
     </div>

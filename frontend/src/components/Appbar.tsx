@@ -3,6 +3,7 @@ import { Avatar } from "./Avatar";
 import type { UserType } from "./Users";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import { Github } from "./Github";
 
 export function Appbar() {
     const [open, setOpen] = useState(false);
@@ -30,6 +31,7 @@ export function Appbar() {
                 PAYTM.
             </div>
             <div className="flex items-center gap-2">
+                <Github />
                 <div className="text-base font-semibold">Hello, {user?.firstName}</div>
                 <div onClick={() => setOpen(prev => !prev)}>
                     <Avatar letter={user?.firstName[0] || "U"} color="primary" />
