@@ -55,6 +55,9 @@ export function Transactions() {
             <div className="font-bold mt-6 text-xl py-1">
                 Transaction Histroy
             </div>
+            {transactions.length === 0 && <div className="text-center text-gray-500 text-lg">
+                No Transaction Histroy
+            </div>}
             <div>
                 {transactions.length > 0 &&
                     transactions.map((transaction) => (
