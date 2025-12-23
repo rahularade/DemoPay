@@ -14,7 +14,7 @@ export const Navbar = ({
                 className="text-2xl font-black cursor-pointer"
                 onClick={() => navigate("/")}
             >
-                PAYTM.
+                PayFlow.
             </div>
             <div className="flex gap-2 md:gap-4 items-center">
                 <Github />

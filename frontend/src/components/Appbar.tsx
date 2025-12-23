@@ -31,7 +31,7 @@ export function Appbar() {
                 className="text-2xl font-black cursor-pointer"
                 onClick={() => navigate("/dashboard")}
             >
-                PAYTM.
+                PayFlow.
             </div>
             <div className="flex items-center gap-2">
                 <Github />
