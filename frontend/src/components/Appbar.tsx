@@ -4,6 +4,8 @@ import type { UserType } from "./Users";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { Github } from "../icons/Github";
+import { User } from "../icons/User";
+import { LinkedIn } from "../icons/LinkedIn";
 
 export function Appbar() {
     const [open, setOpen] = useState(false);
@@ -31,9 +33,11 @@ export function Appbar() {
                 className="text-2xl font-black cursor-pointer"
                 onClick={() => navigate("/dashboard")}
             >
-                PayFlow.
+                DemoPay.
             </div>
             <div className="flex items-center gap-2">
+                <User />
+                <LinkedIn />
                 <Github />
                 <div className="text-base font-semibold">
                     Hello, {user?.firstName}

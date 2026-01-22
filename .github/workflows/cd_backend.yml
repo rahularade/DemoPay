@@ -26,7 +26,7 @@ jobs:
                 context: .
                 file: ./Dockerfile.backend
                 push: true
-                tags: ${{ secrets.DOCKERHUB_USERNAME }}/paytm-backend:latest
+                tags: ${{ secrets.DOCKERHUB_USERNAME }}/demopay-backend:latest
             
             - name: Deploy to VM
               uses: appleboy/ssh-action@v1
@@ -36,8 +36,8 @@ jobs:
                 key: ${{ secrets.SSH_KEY }}
                 port: 22
                 script: |
-                    docker stop paytm-backend || true
-                    docker rm paytm-backend || true
-                    docker rmi ${{ secrets.DOCKERHUB_USERNAME }}/paytm-backend:latest || true
-                    docker run -d -p 3000:3000 --name paytm-backend -e MONGODB_URL=${{ secrets.MONGODB_URL }} -e JWT_SECRET=${{ secrets.JWT_SECRET }} ${{ secrets.DOCKERHUB_USERNAME }}/paytm-backend:latest
+                    docker stop demopay-backend || true
+                    docker rm demopay-backend || true
+                    docker rmi ${{ secrets.DOCKERHUB_USERNAME }}/demopay-backend:latest || true
+                    docker run -d -p 3000:3000 --name demopay-backend -e MONGODB_URL=${{ secrets.MONGODB_URL }} -e JWT_SECRET=${{ secrets.JWT_SECRET }} ${{ secrets.DOCKERHUB_USERNAME }}/demopay-backend:latest
             

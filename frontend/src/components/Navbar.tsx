@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Github } from "../icons/Github";
+import { User } from "../icons/User";
+import { LinkedIn } from "../icons/LinkedIn";
 
 export const Navbar = ({
     type = null,
@@ -14,9 +16,11 @@ export const Navbar = ({
                 className="text-2xl font-black cursor-pointer"
                 onClick={() => navigate("/")}
             >
-                PayFlow.
+                DemoPay.
             </div>
             <div className="flex gap-2 md:gap-4 items-center">
+                <User />
+                <LinkedIn />
                 <Github />
                 <button
                     onClick={() => navigate("/signin")}

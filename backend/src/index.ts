@@ -4,7 +4,7 @@ import express from "express";
 import rootRouter from "./routes";
 import cors from "cors";
 import mongoose, { MongooseError } from "mongoose";
-import { JWT_SECRET, MONGODB_URL } from "./config";
+import { MONGODB_URL } from "./config";
 import apiLimiter from './middlewares/ratelimiter';
 
 const app = express();

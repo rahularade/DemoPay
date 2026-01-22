@@ -1,4 +1,4 @@
-# 💸 PayTM – Basic Wallet & Transactions App
+# 💸 DemoPay – Basic Wallet & Transactions App
 
 A **basic version of PayTM** built to understand how real-world payment systems work.  
 This project demonstrates **authentication, wallet balance management, and atomic transactions** using MongoDB.
@@ -34,7 +34,7 @@ Users can:
 
 ## 📂 Project Structure
 
-paytm  
+demopay  
 ├── frontend   # Vite + React + TypeScript frontend  
 ├── backend    # Node.js + Express + TypeScript backend  
 ├── docker     # Docker files (Mongo & Backend)  
@@ -81,12 +81,12 @@ Make sure you have installed:
 3. Whitelist your IP (0.0.0.0/0 for development)
 4. Copy the connection string:
 ```
-mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/paytm
+mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/demopay
 ```
 
 5. Update .env:
 ```
-MONGODB_URL=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/paytm
+MONGODB_URL=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/demopay
 ```
 
 ### 🔹 Option 2: MongoDB with Docker (Replica Set)
@@ -102,7 +102,7 @@ docker run -d -p 27017:27017 mongodb-replset
 ```
 3. Update .env:
 ```
-MONGODB_URL=mongodb://localhost:27017/paytm
+MONGODB_URL=mongodb://localhost:27017/demopay
 ```
 ---
 ## 🛠 Backend Setup
@@ -118,7 +118,7 @@ npm install
 ```
 ### 3️⃣ Create .env file
 ```
-MONGODB_URL=mongodb://localhost:27017/paytm
+MONGODB_URL=mongodb://localhost:27017/demopay
 JWT_SECRET=supersecretjwt
 ```
 ### 4️⃣ Run Backend
