@@ -51,7 +51,7 @@ export function Signin() {
                     <InputBox
                         type="password"
                         label="Password"
-                        placeholder="Pass@1234"
+                        placeholder="Pass@123"
                         onChange={(e) => {
                             setPassword(e.target.value);
                         }}
